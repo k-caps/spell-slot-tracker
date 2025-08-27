@@ -1,0 +1,18 @@
+{
+  "id": "spell-slot-tracker",
+  "title": "Spell Slot Tracker",
+  "description": "Always-on bar that shows remaining spell slots per actor on the scene (inspired by Monk's Tokenbar).",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "12"
+  },
+  "authors": [{ "name": "You" }],
+  "url": "https://github.com/yourname/spell-slot-tracker",
+  "license": "MIT",
+  "esmodules": ["scripts/main.js"],
+  "styles": ["styles/tracker.css"],
+  "templates": ["templates/tracker.hbs"],
+  "flags": {},
+  "manifestPlusVersion": "2.0.0"
+}
