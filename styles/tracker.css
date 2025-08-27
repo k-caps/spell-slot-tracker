@@ -1,0 +1,91 @@
+/* Root bar */
+.sst-root {
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+  z-index: 70; /* above sidebar, below notifications */
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(2px);
+  max-width: calc(100vw - 24px);
+  overflow-x: auto;
+}
+
+/* A small card per actor */
+.sst-card {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  gap: 4px;
+  min-width: 160px;
+  padding: 6px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+}
+
+.sst-card:hover {
+  outline: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+}
+
+.sst-avatar {
+  width: 36px; height: 36px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.sst-avatar img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+.sst-name {
+  font-size: 12px;
+  line-height: 1.1;
+  color: #e8e8e8;
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Chips row */
+.sst-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.sst-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: #f5f5f5;
+  font-size: 11px;
+}
+
+.sst-chip .fa-solid, .sst-chip .fas {
+  font-size: 11px;
+}
+
+.sst-chip-count {
+  font-weight: 600;
+}
+
+.sst-empty {
+  opacity: 0.6;
+}
+
+.sst-empty-row {
+  color: #ddd; font-size: 12px;
+}
