@@ -1,0 +1,29 @@
+<div id="sst-root" class="sst-root">
+  {{#if actors.length}}
+    {{#each actors}}
+      <div class="sst-card" data-actor-id="{{id}}" title="{{name}}">
+        <div class="sst-avatar">
+          <img src="{{img}}" alt="{{name}}" />
+        </div>
+
+        <div class="sst-name">{{name}}</div>
+
+        <div class="sst-slots">
+          {{#if slots.length}}
+            {{#each slots}}
+              <span class="sst-chip" data-level="{{level}}">
+                {{{icon}}}
+                <span class="sst-chip-label">{{label}}</span>
+                <span class="sst-chip-count">{{available}} / {{max}}</span>
+              </span>
+            {{/each}}
+          {{else}}
+            <span class="sst-chip sst-empty">— no slots —</span>
+          {{/if}}
+        </div>
+      </div>
+    {{/each}}
+  {{else}}
+    <div class="sst-empty-row">No actors on this scene.</div>
+  {{/if}}
+</div>
